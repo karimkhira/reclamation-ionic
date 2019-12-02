@@ -1,0 +1,32 @@
+{
+  "reclamations": [
+    {
+      "id": 1,
+      "message": "panne chambre froide ",
+      "lieu": "cuisine",
+      "etat": "en cours"
+    },
+    {
+      "id": 2,
+      "message": "panne electricite ",
+      "lieu": "terrain tennis",
+      "etat": "en cours"
+    },
+    {
+      "id": 3,
+      "message": "fuite d'eau ",
+      "lieu": "jardin mini club",
+      "etat": "en cours"
+    },
+    {
+      "id": 4,
+      "message": "probleme serrure ",
+      "lieu": "vestiaire homme ",
+      "etat": "en cours"
+    },
+    {
+      "message": "fxgxgxfch",
+      "id": 5
+    }
+  ]
+}

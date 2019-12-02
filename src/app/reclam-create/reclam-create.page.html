@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Create Reclamation</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content padding>
+ 
+  <ion-item>
+    <ion-label>Reclamation</ion-label>
+    <ion-input [(ngModel)]="data.message" placeholder="Enter texte de reclamation"></ion-input>
+  </ion-item>
+ 
+  <ion-list>
+    <ion-item>
+      <ion-label>Lieux</ion-label>
+      <ion-select placeholder="Select One">
+        <ion-select-option value="Cuisine">Cuisine</ion-select-option>
+        <ion-select-option value="Jardin">Jardin</ion-select-option>
+        <ion-select-option value="Tennis">Tennis</ion-select-option>
+        <ion-select-option value="Miniclub">Mini-Club</ion-select-option>
+        <ion-select-option value="Piscine">Piscine</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Etats</ion-label>
+        <ion-select placeholder="Select One">
+          <ion-select-option value="encours">En cours</ion-select-option>
+          <ion-select-option value="enattente">En attente</ion-select-option>
+          <ion-select-option value="repare">Réparé</ion-select-option>
+          <ion-select-option value="annule">Annulé</ion-select-option>
+        </ion-select>
+      </ion-item>
+  </ion-list>
+ 
+  <ion-item>
+    <ion-button (click)="submitForm()">Ajouter
+    </ion-button>
+  </ion-item>
+ 
+</ion-content> 

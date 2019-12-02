@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>List reclamations</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content padding>
+    <ion-button [routerLink]="['/create']">
+      Ajout reclamations
+    </ion-button>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Texte reclamation</th>
+        <th scope="col">Lieu</th>
+        <th scope="col">Address</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of reclamationsData">
+        <td>{{ item.id }}</td>
+        <td>{{ item.message }}</td>
+        <td>{{ item.lieu }}</td>
+        <td>{{ item.etat }}</td>
+        <td style="display: flex">
+          <ion-button color="warning" size="small" routerLink='/edit/{{item.id}}'>
+            <ion-icon name="create"></ion-icon>
+          </ion-button>
+          <ion-button color="danger" size="small" (click)="delete(item)">
+            <ion-icon name="trash"></ion-icon>
+          </ion-button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+ </ion-content>
