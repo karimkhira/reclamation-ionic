@@ -1,7 +1,9 @@
 export class Reclamation {
     id: bigint;
     message: Text;
-    lieu: string;
-    etat: string;
-        
+    etat_id: bigint;
+    usercreation_id: bigint;
+    locals_id: bigint;
+    userreparation_id: bigint;
+
     }

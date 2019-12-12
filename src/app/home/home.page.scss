@@ -1,1 +1,44 @@
+//pour le background de toute l'interface
+ion-header {
+    --ion-background-color: #c6f6fe ;
+}
 
+ion-content {
+    --ion-background-color: linear-gradient(#63E9FF, #002e7f);
+}
+//pour le background de toute la balise <ion item>
+ion-item{
+--ion-background-color:transparent !important;
+
+}
+//pour le "class=padding"
+
+.padding
+{
+    padding : 5%;
+}
+//pour le "class=flex"
+.flex
+{
+    display:flex;
+    justify-content: space-between;
+
+}
+//pour le "logo"
+.logo 
+{
+    position: relative;
+    height:200px;
+}
+//pour le "img" entre la balise portant le class=logo
+.logo img
+{
+   
+    height: 150px;
+    position: inherit;
+     left : 20%;
+     top : 5%;
+    transform:translate ( -50% , -50% );
+
+   
+} 

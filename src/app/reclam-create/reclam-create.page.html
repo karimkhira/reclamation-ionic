@@ -1,6 +1,13 @@
 <ion-header>
   <ion-toolbar color="tertiary">
-    <ion-title>Create Reclamation</ion-title>
+      
+          <ion-buttons slot="start">
+            <ion-back-button defaultHref="/list"></ion-back-button>
+          </ion-buttons>
+
+                    
+      
+    <ion-title>Creation Reclamation</ion-title>
   </ion-toolbar>
 </ion-header>
  
@@ -8,32 +15,43 @@
  
   <ion-item>
     <ion-label>Reclamation</ion-label>
-    <ion-input [(ngModel)]="data.message" placeholder="Enter texte de reclamation"></ion-input>
+    <ion-input [(ngModel)]="message" placeholder="Votre texte de reclamation"></ion-input>
   </ion-item>
  
-  <ion-list>
-    <ion-item>
-      <ion-label>Lieux</ion-label>
-      <ion-select placeholder="Select One">
-        <ion-select-option value="Cuisine">Cuisine</ion-select-option>
-        <ion-select-option value="Jardin">Jardin</ion-select-option>
-        <ion-select-option value="Tennis">Tennis</ion-select-option>
-        <ion-select-option value="Miniclub">Mini-Club</ion-select-option>
-        <ion-select-option value="Piscine">Piscine</ion-select-option>
-      </ion-select>
-    </ion-item>
+  
+  <ion-item>
+    <ion-label>Lieux</ion-label>
+    <ion-select [(ngModel)]="locals_id" ok-text="Ok" cancel-text="Annulé">
+      <ion-select-option value="1">Reception</ion-select-option>
+      <ion-select-option value="2">Bar</ion-select-option>
+      <ion-select-option value="3">Café Maure</ion-select-option>
+      <ion-select-option value="4">Piscine</ion-select-option>
+      <ion-select-option value="5">Piscine Couverte</ion-select-option>
+      <ion-select-option value="6">Jardin</ion-select-option>
+      <ion-select-option value="7">Centre Thalasso</ion-select-option>
+      <ion-select-option value="8">Cuisine</ion-select-option>
+      <ion-select-option value="9">Terrains Sports</ion-select-option>
+      <ion-select-option value="10">Cour Service</ion-select-option>
+    </ion-select>
+  </ion-item>
 
+  <ion-item>
+      <ion-label>Technicien</ion-label>
+      <ion-select [(ngModel)]="userreparation_id" ok-text="Ok" cancel-text="Annulé">
+        <ion-select-option value="2">KAIS</ion-select-option>
+        <ion-select-option value="5">MOEZ</ion-select-option>
+        <ion-select-option value="6">ABDELHALIM</ion-select-option>
+      </ion-select>
+  </ion-item>
+  
     <ion-item>
         <ion-label>Etats</ion-label>
-        <ion-select placeholder="Select One">
-          <ion-select-option value="encours">En cours</ion-select-option>
-          <ion-select-option value="enattente">En attente</ion-select-option>
-          <ion-select-option value="repare">Réparé</ion-select-option>
-          <ion-select-option value="annule">Annulé</ion-select-option>
+        <ion-select [(ngModel)]="etat_id">
+          <ion-select-option value="3">En attente</ion-select-option>
         </ion-select>
       </ion-item>
-  </ion-list>
- 
+  
+       
   <ion-item>
     <ion-button (click)="submitForm()">Ajouter
     </ion-button>

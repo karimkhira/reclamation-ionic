@@ -1,5 +1,8 @@
 <ion-header>
   <ion-toolbar color="tertiary">
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
     <ion-title>List reclamations</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,19 +15,25 @@
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Texte reclamation</th>
-        <th scope="col">Lieu</th>
-        <th scope="col">Address</th>
-        <th scope="col">Actions</th>
+          <th scope="col">Id</th>
+        <th scope="col">Réclamation </th>
+        <th scope="col"> Crée Par </th>
+        <th scope="col"> Lieu </th>
+        <th scope="col"> Crée le </th>
+        <th scope="col"> Etat </th>
+        <th scope="col"> Technicien </th>
+        <th scope="col"> Actions </th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let item of reclamationsData">
         <td>{{ item.id }}</td>
         <td>{{ item.message }}</td>
-        <td>{{ item.lieu }}</td>
+        <td>{{ item.usercreation_id }}</td>
+        <td>{{ item.locals_id }}</td>
+        <td>{{ item.created_at }}</td>
         <td>{{ item.etat }}</td>
+        <td>{{ item.userreparation_id }}</td>
         <td style="display: flex">
           <ion-button color="warning" size="small" routerLink='/edit/{{item.id}}'>
             <ion-icon name="create"></ion-icon>
